@@ -49,12 +49,26 @@ str.deleteCharAt(6);
 
 ---------------------ArrayList------------------------------
 
-ArrayList<Integer> object = new ArrayList<Integer>(n):
-object.add(5);
-object.remove(i); //removes element at ith index
+ArrayList<Integer> object = new ArrayList<Integer>(n);
+List<Integer> object_new = new LinkedList<Integer>():
+object.add(5); // appends 5
+object.remove(i); //removes element present at ith index
+object.addAll(object_new); // elements from object_new will get appended 
+object.removeAll(object_new); //removes elements from object which are present in object_new
+object.set(3, 85);  //sets value 85 at 3rd index
 object.get(i); //similar to arr[i]
 boolean status = object.contains(2);
+boolean full = !(object.isEmpty(object)); // using not operatorin java
 object.size();
+// Iterating in ArrayList
+for(Integer i: object) {
+	System.out.print(i);
+};
+
+// converting ArrayList to an arrray
+Integer temp[] = new Integer[object.size()];
+object.toArray(temp); // temp array has the contents of object
+
 
 ------------------------Stack/Queue--------------------------------------------
 
