@@ -9,6 +9,7 @@ Question link: https://www.interviewbit.com/problems/merge-intervals/
 public class Solution {
     public ArrayList<Interval> insert(ArrayList<Interval> intervals, Interval newInterval) {
 
+	// if the input is empty, we can add our newInterval but if null, we need to create an ArrayList
         if(intervals.size()==0) {
             intervals.add(newInterval);
             return intervals;
