@@ -69,6 +69,8 @@ for(Integer i: object) {
 Integer temp[] = new Integer[object.size()];
 object.toArray(temp); // temp array has the contents of object
 
+// always take care of this base case
+if(object.size()==0 || object==null)
 
 ------------------------Stack/Queue--------------------------------------------
 
