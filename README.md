@@ -5,3 +5,5 @@
 #### Problem-2 [Two Sum Leetcode](https://leetcode.com/problems/add-two-numbers)
 
 #### Problem-3 [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+#### Problem-4 [Merge Intervals](https://www.interviewbit.com/problems/merge-intervals/)
