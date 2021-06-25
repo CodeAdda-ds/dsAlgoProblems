@@ -116,6 +116,11 @@ object.size();
         Iterator it = linkedList.iterator();
         while(it.hasNext()){
             System.out.print(it.next() + " ");}
+	
+	// to traverse in reverse
+	ListIterator<String> lit = obj.listIterator(obj.size());
+	while (lit.hasPrevious())
+	    System.out.println(lit.previous());
             
         object.forEach(
             (element) -> System.out.print(element + " "));
