@@ -49,12 +49,81 @@ str.deleteCharAt(6);
 
 ---------------------ArrayList------------------------------
 
-ArrayList<Integer> object = new ArrayList<Integer>(n):
-object.add(5);
-object.remove(i); //removes element at ith index
+ArrayList<Integer> object = new ArrayList<Integer>(n);
+List<Integer> object_new = new LinkedList<Integer>():
+object.add(5); // appends 5
+object.remove(i); //removes element present at ith index
+object.addAll(object_new); // elements from object_new will get appended 
+object.removeAll(object_new); //removes elements from object which are present in object_new
+object.set(3, 85);  //sets value 85 at 3rd index
 object.get(i); //similar to arr[i]
 boolean status = object.contains(2);
+boolean full = !(object.isEmpty(object)); // using not operatorin java
 object.size();
+// Iterating in ArrayList
+for(Integer i: object) {
+	System.out.print(i);
+};
+
+Iterator it = object.iterator();
+while (it.hasNext())
+         System.out.print(it.next() + " ");
+
+object.forEach(number->System.out.println(number));
+
+// use this to remove in arraylist instead of using ArrayList.remove()
+Iterator itr = object.iterator();
+while (itr.hasNext())
+{
+    int x = (Integer)itr.next();
+    if (x < 10)  // if condition
+	itr.remove();
+}
+
+// converting ArrayList to an arrray
+Integer temp[] = new Integer[object.size()];
+object.toArray(temp); // temp array has the contents of object
+
+// always take care of this base case
+if(object.size()==0 || object==null)
+	
+--------------------------LinkedList------------------------------------------
+LinkedList<String> object = new LinkedList<String>();
+object.add("A");
+object.addFirst("B");
+object.add(1, "C");
+object.remove("B");
+object.remove(2);
+object.removeFirst();
+object.removeLast();
+boolean status = object.contains("D");
+String element = object.get(1); //gets value at ith index
+object.set(3, "Y");
+object.size();
+
+// iterating the LinkedList
+        for (int i = 0; i < object.size(); i++) {
+            System.out.print(object.get(i) + " ");}
+
+        int i = 0;
+        while(i<object.size()){
+            System.out.print(vowels.get(i) + " ");
+            i++;}
+            
+        for (String listElement : object) {
+            System.out.print(listElement + " ");}
+            
+        Iterator it = linkedList.iterator();
+        while(it.hasNext()){
+            System.out.print(it.next() + " ");}
+	
+	// to traverse in reverse
+	ListIterator<String> lit = obj.listIterator(obj.size());
+	while (lit.hasPrevious())
+	    System.out.println(lit.previous());
+            
+        object.forEach(
+            (element) -> System.out.print(element + " "));
 
 ------------------------Stack/Queue--------------------------------------------
 
