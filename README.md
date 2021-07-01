@@ -6,3 +6,7 @@
 #### Problem-3 [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 #### Problem-4 [Merge Intervals](https://www.interviewbit.com/problems/merge-intervals/)
+
+#### Problem-5 [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+
+#### Problem-6 [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
