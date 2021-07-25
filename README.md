@@ -12,3 +12,5 @@
 #### Problem-6 [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
 
 #### Problem-7 [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+
+#### Problem-8 [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)
