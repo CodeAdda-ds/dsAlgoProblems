@@ -10,3 +10,5 @@
 #### Problem-5 [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 #### Problem-6 [Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+
+#### Problem-6 [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
