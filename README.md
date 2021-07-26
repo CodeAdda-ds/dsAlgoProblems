@@ -16,3 +16,5 @@
 #### Problem-8 [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)
 
 #### Problem-9 [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
+
+#### Problem-10 [Same Tree](https://leetcode.com/problems/same-tree/)
