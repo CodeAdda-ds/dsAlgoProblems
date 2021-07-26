@@ -18,3 +18,5 @@
 #### Problem-9 [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
 
 #### Problem-10 [Same Tree](https://leetcode.com/problems/same-tree/)
+
+#### Problem-11 [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
