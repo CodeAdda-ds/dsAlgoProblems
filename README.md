@@ -14,3 +14,5 @@
 #### Problem-7 [Binary Tree Inorder Traversal](https://leetcode.com/problems/binary-tree-inorder-traversal/)
 
 #### Problem-8 [Unique Binary Search Trees](https://leetcode.com/problems/unique-binary-search-trees/)
+
+#### Problem-9 [Symmetric Tree](https://leetcode.com/problems/symmetric-tree/)
