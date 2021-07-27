@@ -20,3 +20,5 @@
 #### Problem-10 [Same Tree](https://leetcode.com/problems/same-tree/)
 
 #### Problem-11 [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+
+#### Problem-12 [Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
