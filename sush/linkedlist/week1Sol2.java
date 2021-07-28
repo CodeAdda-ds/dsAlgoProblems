@@ -47,3 +47,44 @@ class Solution {
     }
 
 
+// this is the final solution
+class Solution {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode firstPointer = l1, secPointer = l2;
+        ListNode output = null, traverseOutput = null;
+        int sum, carry = 0;
+        while(firstPointer!=null && secPointer!=null){
+            sum = firstPointer.val + secPointer.val + carry;
+            if(output==null){
+                output = new ListNode(sum%10);
+                traverseOutput = output;
+            } else {
+                traverseOutput.next = new ListNode(sum%10);
+                traverseOutput = traverseOutput.next;
+
+            }
+            carry = sum/10;
+            firstPointer = firstPointer.next;
+            secPointer = secPointer.next;
+        }
+        while(firstPointer!=null){
+            sum = firstPointer.val + carry;
+            traverseOutput.next = new ListNode(sum%10);
+            traverseOutput = traverseOutput.next;
+            carry = sum/10;
+            firstPointer = firstPointer.next;
+        }
+        while(secPointer!=null){
+            sum = secPointer.val + carry;
+            traverseOutput.next = new ListNode(sum%10);
+            traverseOutput = traverseOutput.next;
+            carry = sum/10;
+            secPointer = secPointer.next;
+        }
+        if(carry!=0){
+            traverseOutput.next = new ListNode(carry);
+        }
+        return output;
+    }   
+}
+
