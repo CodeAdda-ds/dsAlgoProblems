@@ -28,3 +28,5 @@
 #### Problem-14 [Minimum Depth of Binary Tree](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
 
 #### Problem-15 [Path Sum](https://leetcode.com/problems/path-sum/)
+
+#### Problem-16 [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
