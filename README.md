@@ -30,3 +30,5 @@
 #### Problem-15 [Path Sum](https://leetcode.com/problems/path-sum/)
 
 #### Problem-16 [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+#### Problem-17 [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
