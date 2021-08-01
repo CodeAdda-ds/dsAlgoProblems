@@ -30,3 +30,9 @@
 #### Problem-15 [Path Sum](https://leetcode.com/problems/path-sum/)
 
 #### Problem-16 [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/)
+
+#### Problem-17 [Lowest Common Ancestor of a Binary Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/)
+
+#### Problem-18 [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
+
+#### Problem-19 [Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/)
