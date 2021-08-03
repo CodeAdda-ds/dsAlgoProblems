@@ -36,3 +36,5 @@
 #### Problem-18 [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 
 #### Problem-19 [Cousins in Binary Tree](https://leetcode.com/problems/cousins-in-binary-tree/)
+
+#### Problem-20 [Matrix Diagonal Sum](https://leetcode.com/problems/matrix-diagonal-sum/)
