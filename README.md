@@ -41,3 +41,8 @@
 
 #### Problem-21 [Rotate Image](https://leetcode.com/problems/rotate-image/)
 
+#### Problem-22 [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)
+
+#### Problem-23 [Available Captures for Rook](https://leetcode.com/problems/available-captures-for-rook/)
+
+#### Problem-24 [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
