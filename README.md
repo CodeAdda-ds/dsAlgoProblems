@@ -41,3 +41,4 @@
 
 #### Problem-21 [Rotate Image](https://leetcode.com/problems/rotate-image/)
 
+#### Problem-22 [Richest Customer Wealth](https://leetcode.com/problems/richest-customer-wealth/)
