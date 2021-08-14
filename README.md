@@ -46,3 +46,19 @@
 #### Problem-23 [Available Captures for Rook](https://leetcode.com/problems/available-captures-for-rook/)
 
 #### Problem-24 [Reshape the Matrix](https://leetcode.com/problems/reshape-the-matrix/)
+
+#### *Problem-25 [Island Perimeter](https://leetcode.com/problems/island-perimeter/)
+
+#### Problem-26 [Special Positions in a Binary Matrix](https://leetcode.com/problems/special-positions-in-a-binary-matrix/)
+
+#### Problem-27 [Flood Fill](https://leetcode.com/problems/flood-fill/)
+
+#### *Problem-28 [Set Matrix Zeroes](https://leetcode.com/problems/set-matrix-zeroes/)
+
+#### *Problem-29 [Word Search](https://leetcode.com/problems/word-search/)
+
+#### *Problem-30 [Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
+
+#### *Problem-31 [Number of Islands](https://leetcode.com/problems/number-of-islands/)
+
+#### *Problem-32 [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
