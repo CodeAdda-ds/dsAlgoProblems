@@ -1,0 +1,47 @@
+Knapsack means a bag
+
+we cannot fill the bag by more than its capacity
+
+how you fill the bag is defined by knapsack type
+
+a) entire item into the bag
+
+b) multiple instances of item in the bag
+
+c) fractional components in the bag
+
+
+Knapsack types:
+
+1. 0-1 knapsack: either an instance will be present in the bag or not, i.e. multiple instances are not allowed
+total combinations: 2^n 
+
+2. Bounded knapsack: either include an item(multiple instances are allowed but the value should be limiting, not infinity) /exclude an item
+
+3. Unbounded knapsack: no such boundation on the number, can be infinite
+
+Knapsack can also be:
+
+1. Fractional (Greedy) : we can include fractional part of an item
+
+so we calculate rate, i.e. profit/weight and we will go in the decreasing order of profit. we fill the bag with the maximum rate first
+
+2. Integer type: can't pick part of an item
+
+We will be seeing questions of these two categories' combinations:
+Most common ones are 
+
+integer + bounded == fractional parts are not allowed + limit on no of instances taken per item
+integer + unbounded
+
+Some Knapsack variations:
+
+1. subset sum problem
+
+2. partition equal subset sum
+
+3. count of subsets with sum == x
+
+4. partition a set into 2 subsets such that the difference of subset sum is minimum
+
+5. target sum

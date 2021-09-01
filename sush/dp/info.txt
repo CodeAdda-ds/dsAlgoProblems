@@ -1,0 +1,19 @@
+Types of DP:
+
+only focus on these for now
+
+1. Knapsack --> 0 - 1 
+	    --> Bounded
+	    --> Unbounded
+
+2. LCS (Lowest Common Subsequence)
+
+3. LIS (Longest Increasing Subsequence)
+
+4. Matrix chain multiplication
+
+5. DP on grid
+
+6. Kadane's algorithm
+
+others
