@@ -64,3 +64,5 @@
 #### *Problem-32 [Minimum Path Sum](https://leetcode.com/problems/minimum-path-sum/)
 
 #### Problem-33 [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
+
+#### Problem-34 [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
