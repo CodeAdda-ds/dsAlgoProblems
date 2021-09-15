@@ -66,3 +66,9 @@
 #### Problem-33 [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/)
 
 #### Problem-34 [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
+
+#### Problem-35 [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+#### Problem-36 [Min Cost Climbing Stairs](https://leetcode.com/problems/min-cost-climbing-stairs/)
+
+#### Problem-37 [House Robber](https://leetcode.com/problems/house-robber/)
