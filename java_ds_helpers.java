@@ -150,3 +150,20 @@ map.put(key, map.get(key) + 1); // general method to update the table
 }
 map.values(); // gives a list of all the values
 
+-------------------------- Depth First Search --------------------------------------
+
+// on graph
+void dfs(int currNode){
+    visited[currNode] = 1;
+    
+    for(int adjNode : adj[currNode]){
+        if(visited[adjNode]==0){
+            dfs(adjNode);
+        }
+    }
+}
+
+// on 2D grid
+// cell  = node
+// sides = edges
+// sides + corners = edges
