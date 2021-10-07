@@ -21,3 +21,20 @@ class Solution {
         return output;
         }
 }
+
+
+// in place algorithm, constant space
+
+class Solution {
+    public List<Integer> findDuplicates(int[] nums) {
+        ArrayList<Integer> ans = new ArrayList<>();
+        for(int i=0; i < nums.length; i++){
+            if(nums[Math.abs(nums[i])-1] > 0) {
+                nums[Math.abs(nums[i])-1] *= -1; // mark the number visited
+            } else {
+                ans.add(Math.abs(nums[i]));
+            }
+        }
+        return ans;
+    }
+}
