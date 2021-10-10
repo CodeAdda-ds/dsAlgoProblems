@@ -45,6 +45,7 @@ class Solution
             }
             long value = arr2[0]; // saving the first element because we will insert it somewhere in second array
             int j;
+            // doing this to make sure that the array 2 is sorted at all time
             for(j=1; j < m && arr2[j] < value; j++){ 
                 // shifting until we find the place to insert the value
                 arr2[j-1] = arr2[j];
