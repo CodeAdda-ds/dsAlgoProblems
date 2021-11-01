@@ -17,6 +17,17 @@ int value = 30;
 String s1 = String.valueOf(value); // String.valueOf() converts anything into string 
 System.out.println(s1+10);//concatenating string with 10  outputs is: 3010
 
+
+// converting string value to number for operations
+int sum=0;
+int sum2=0;
+String n = "1234";
+for(int i=0;i<n.length();i++){
+    sum += Character.getNumericValue(n.charAt(i)); // method 1
+    sum2 += n.charAt(i) - '0'; // method 2
+}
+
+
 -------------------StringBuilder---------------------------
 
 // we have this example using String CTCI pg 60
