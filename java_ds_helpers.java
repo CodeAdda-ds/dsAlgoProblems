@@ -1,3 +1,15 @@
+-----------Input----------------------------
+1. Take input of array when size is not mentioned
+----Take array as a string
+List<Integer> list = new ArrayList<>();
+String s = scanner.nextLine();
+String str[] = s.split("\\s");
+for(String i: str){
+	list.add(Integer.parseInt(i));
+}
+
+
+
 -------------String---------------
 
 String str = "airplane";
@@ -160,6 +172,22 @@ Integer value = map.get("Abhi");
 map.put(key, map.get(key) + 1); // general method to update the table
 }
 map.values(); // gives a list of all the values
+
+--- To iterate in hashmap we use entrySet()
+Map<Integer, Integer> map = new HashMap<Integer, Integer>();
+for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+    System.out.println("Key = " + entry.getKey() + ", Value = " + entry.getValue());
+}
+
+//Iterating over Keys only
+for (Integer key : map.keySet()) {
+    System.out.println("Key = " + key);
+}
+
+// Iterating over values only
+for (Integer value : map.values()) {
+    System.out.println("Value = " + value);
+}
 
 -------------------------- Depth First Search --------------------------------------
 
