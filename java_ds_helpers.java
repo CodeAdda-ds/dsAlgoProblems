@@ -8,8 +8,39 @@ for(String i: str){
 	list.add(Integer.parseInt(i));
 }
 
+2. Take input of array when comma/space/comma with space separated stream of numbers is given
+Scanner sc = new Scanner(System.in);
+int n = Integer.parseInt(sc.nextLine());
+String inp = sc.nextLine();
+String arr[] = inp.split(" ");
+int temp;
+for(String c: arr) {
+    temp = c.trim().charAt(0) - '0';
+    System.out.print(temp);
+}
+// i/p: 3
+//      1,2,3
+// o/p  123
+// i/p: 3
+//      1 2 3
+// o/p  123
+// i/p: 3
+//      1, 2, 3
+// o/p  123
 
-
+3. take input of array when comma/space/comma with space separated stream of characters is given
+Scanner sc = new Scanner(System.in);
+int n = Integer.parseInt(sc.nextLine());
+String inp = sc.nextLine();
+String arr[] = inp.split(" ");
+int temp;
+for(String c: arr) {
+    temp = c.trim().charAt(0);
+    System.out.print(temp);
+}
+// i/p: 3
+//      a, b, c
+// o/p  abc
 -------------String---------------
 
 String str = "airplane";
@@ -188,6 +219,10 @@ for (Integer key : map.keySet()) {
 for (Integer value : map.values()) {
     System.out.println("Value = " + value);
 }
+
+// to get Datatype type of key/value
+map.forEach((k,v) -> System.out.println("Key type = "
+                + k.getClass().getSimpleName() + ", Value type = " + v.getClass().getSimpleName() + ".")); // String aur Integer dega output me
 
 -------------------------- Depth First Search --------------------------------------
 
