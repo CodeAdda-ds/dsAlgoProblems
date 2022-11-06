@@ -41,6 +41,9 @@ for(String c: arr) {
 // i/p: 3
 //      a, b, c
 // o/p  abc
+
+//Sort array
+Arrays.sort(array);   
 -------------String---------------
 
 String str = "airplane";
@@ -102,7 +105,9 @@ str.setCharAt(3, 'l'); // k ban gaya l and returns nothing
 str.deleteCharAt(6); 
 
 ---------------------ArrayList------------------------------
-
+// to sort list use Collections-
+Collections.sort(list)
+	
 ArrayList<Integer> object = new ArrayList<Integer>(n);
 List<Integer> object_new = new LinkedList<Integer>():
 object.add(5); // appends 5
@@ -193,6 +198,19 @@ for(int i=0; i<5; i++){
 queue.add(i);
 } // adds [0, 1, 2, 3, 4]
 Integer head = queue.remove();  // returns 0
+
+Deque-
+The Deque supports the addition as well as the removal of elements from both ends of the data structure. Therefore, a deque can be used as a stack or a queue.
+	
+ //Creating Deque and adding elements  
+   Deque<String> deque = new ArrayDeque<String>();  
+   deque.add("Ravi");    
+   deque.add("Vijay");     
+   deque.add("Ajay");    
+   //Traversing elements  
+   for (String str : deque) {  
+   System.out.println(str);  
+  }   
 
 ---------------------------HashTable--------------------------------------------------
 
