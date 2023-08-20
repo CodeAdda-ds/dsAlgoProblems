@@ -1,0 +1,131 @@
+Tree DSA Snippets-
+  
+  1. Traversal-
+  Inorder - L , N, R
+  void printInorder(Node node)
+    {
+        if (node == null)
+            return;
+ 
+        printInorder(node.left);
+        System.out.print(node.key + " ");
+        printInorder(node.right);
+    }
+  Preorder - N, L, R
+  void printPreorder(Node node)
+    {
+        if (node == null)
+            return;
+        System.out.print(node.key + " ");
+        printPreorder(node.left);
+        printPreorder(node.right);
+    }
+  Postorder - L, R, N
+  void printPostorder(Node node)
+    {
+        if (node == null)
+            return;
+        printPostorder(node.left);
+        printPostorder(node.right);
+        System.out.print(node.key + " ");
+    }
+
+
+Height of Tree-
+int height(TreeNode node)
+{
+    if (node == NULL)
+        return 0;
+    else {
+        int lheight = height(node.left);
+        int rheight = height(node.right);
+        if (lheight > rheight)
+            return (lheight + 1);
+        else
+            return (rheight + 1);
+    }
+}
+
+Current Level Node Traversal-
+// Print nodes at a current level 
+void printCurrentLevel(TreeNode root, int level)
+{
+    if (root == NULL)
+        return;
+    if (level == 1)
+        print(root.data)
+    else if (level > 1) {
+        printCurrentLevel(root.left, level - 1);
+        printCurrentLevel(root.right, level - 1);
+    }
+}
+
+Diameter of tree-
+Longest path b/w two leaf nodes
+ public int diameterOfBinaryTree(TreeNode root) {
+      if(root==null)
+          return 0;
+      int l = height(root.left);
+      int r = height(root.right);
+      return Math.max(l+r,Math.max(diameterOfBinaryTree(root.left),diameterOfBinaryTree(root.right)));
+  }
+
+Boundary Traversal of Tree- https://www.geeksforgeeks.org/boundary-traversal-of-binary-tree/
+void printBoundary(Node node)
+    {
+        if (node == null)
+            return;
+ 
+        System.out.print(node.data + " ");
+ 
+        // Print the left boundary in top-down manner.
+        printBoundaryLeft(node.left);
+ 
+        // Print all leaf nodes
+        printLeaves(node.left);
+        printLeaves(node.right);
+ 
+        // Print the right boundary in bottom-up manner
+        printBoundaryRight(node.right);
+    }
+
+Diagonal traversal of Tree-
+  //we are using preorder here but we can use any order travesal
+public static void printDiagonal(Node node, int diagonal,
+                                    Map<Integer, List<Integer>> map)
+    {
+        if (node == null) {
+            return;
+        }
+ 
+        // insert the current node into the current diagonal
+        map.putIfAbsent(diagonal, new ArrayList<>());
+        map.get(diagonal).add(node.data);
+ 
+        // recur for the left subtree by increasing diagonal by 1
+        printDiagonal(node.left, diagonal + 1, map);
+ 
+        // recur for the right subtree with the same diagonal
+        printDiagonal(node.right, diagonal, map);
+    }
+
+Vertical Traversal of Tree-
+  //we are using preorder here but we can use any order travesal
+public static void printVertical(Node node, int dist,
+                                  Map<Integer, List<Integer>> map)
+  {
+      if (node == null) {
+          return;
+      }
+
+      // insert nodes present at a current horizontal distance into the map
+      insertIntoHashMap(map, dist, node.key);
+
+      // recur for the left subtree by decreasing horizontal distance by 1
+      printVertical(node.left, dist - 1, map);
+
+      // recur for the right subtree by increasing horizontal distance by 1
+      printVertical(node.right, dist + 1, map);
+  }
+ 
+  
