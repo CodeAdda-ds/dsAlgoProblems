@@ -242,6 +242,16 @@ for (Integer value : map.values()) {
 map.forEach((k,v) -> System.out.println("Key type = "
                 + k.getClass().getSimpleName() + ", Value type = " + v.getClass().getSimpleName() + ".")); // String aur Integer dega output me
 
+// Creating a TreeMap
+TreeMap<Integer, Integer> mp = new TreeMap<>();
+// Creating a TreeMap that'll store the values in descending order
+TreeMap<Integer, Integer> mp = new TreeMap<>(Collections.reverseOrder());
+// creating a list of entries from the TreeMap 
+List<Map.Entry<Integer, Integer>> entries = new ArrayList<>(mp.entrySet());
+// Sort the entries based on frequency (value) in descending order
+entries.sort((entry1, entry2) -> entry2.getValue().compareTo(entry1.getValue()));
+// To get key of an entry at ith index
+entries.get(i).getKey(); // you can get the value by using the getValue() method
 -------------------------- Depth First Search --------------------------------------
 
 // on graph
