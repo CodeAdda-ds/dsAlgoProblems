@@ -1,0 +1,23 @@
+Heap works like a Stack, the latest value inserted will be removed first
+
+Time complexity: Nlog(K)
+
+```java
+PriorityQueue<Integer> minHeap = new PriorityQueue<Integer> (); // used to find kth largest
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a); // used to find kth smallest
+
+minHeap.offer(val); // push val into minHeap
+
+// if size exceeds k, remove the latest element
+if (minHeap.size() > k)
+    minHeap.poll();
+
+minheap.peek(); // returns the top of the minHeap
+
+// iterate minHeap
+while(!minHeap.isEmpty()) {
+  // some work
+}
+```
+
+Same thing can be done for heap where the value is some pair
