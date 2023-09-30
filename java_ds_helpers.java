@@ -73,6 +73,21 @@ for(int i=0;i<n.length();i++){
     sum2 += n.charAt(i) - '0'; // method 2
 }
 
+// reversing a string and storing it somewhere
+String reverseString(String str){  
+	char ch[]=str.toCharArray();  
+	String rev="";  
+	for(int i=ch.length-1;i>=0;i--){  
+	    rev+=ch[i];  
+	}  
+	return rev;  
+}
+// using StringBuilder
+String reverseString(String str){  
+        StringBuilder rev = new StringBuilder(str);
+        rev.reverse();
+        return rev.toString();
+}
 
 -------------------StringBuilder---------------------------
 
