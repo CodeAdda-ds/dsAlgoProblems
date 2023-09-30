@@ -234,6 +234,7 @@ map.put("Abhi", 12);
 if(map.containsKey("Abhi")){
 Integer value = map.get("Abhi");
 map.put(key, map.get(key) + 1); // general method to update the table
+map.put(key, mp.getOrDefault(key, 0) + 1); // here 0 is the default value if key doesn't exist
 }
 map.values(); // gives a list of all the values
 
