@@ -1,0 +1,20 @@
+```
+TODO: add all the algorithms here in this file
+-------------------------- Depth First Search --------------------------------------
+
+// on graph
+void dfs(int currNode){
+    visited[currNode] = 1;
+    
+    for(int adjNode : adj[currNode]){
+        if(visited[adjNode]==0){
+            dfs(adjNode);
+        }
+    }
+}
+
+// on 2D grid
+// cell  = node
+// sides = edges
+// sides + corners = edges
+```
