@@ -1,4 +1,32 @@
-0/1 Knapsack
+#### `0/1 Knapsack (bounded)`
+recursive
+```java
+int knapsack(int Wt[], int val[], int W, int n) {
+    // base condition
+    if(n==0 || W==0)
+    	return 0;
+    if(Wt[n-1] <= W) // can include
+    	return Math.max(val[n-1] + knapsack(Wt, val, W-Wt[n-1], n-1), knapsack(Wt, val, W, n-1));
+    else // can't include
+    	return knapsack(Wt, val, W, n-1);
+}
+```
+memoised code
+```java
+int dp[n+1][W+1]; 
+// fill the table with -1
+int knapsack(int Wt[], int val[], int W, int n) {
+    // base condition
+    if(n==0 || W==0)
+    	return 0;
+    if(dp[n][W]!=-1) return dp[n][W];
+    if(Wt[n-1] <= W) // can include
+    	return dp[n][W] = Math.max(val[n-1] + knapsack(Wt, val, W-Wt[n-1], n-1), knapsack(Wt, val, W, n-1));
+    else // can't include
+    	return dp[n][W] = knapsack(Wt, val, W, n-1);
+}
+```
+tabulation
 ```java
 // initialisation
 for(int i=0; i <N+1; i++) {
@@ -10,13 +38,71 @@ for(int i=0; i <N+1; i++) {
 }
 for(int i=1; i <N+1; i++) {
     for(int j=1; j<W+1; j++) {
-        if(wt[i-1]<=j) {
+        if(wt[i-1]<=j) { // can include
             dp[i][j] = Math.max(val[i-1] + dp[i-1][j-wt[i-1]], dp[i-1][j]);
-        } else {
+        } else { // can't include
             dp[i][j] = dp[i-1][j];
         }
     }
 }
+```
+subset sum (if sum(subset) == target => return true)
+```java
+// Wt[] -> arr[], N = arr.length
+// W -> target
+// initialisation
+for(int i=0; i <N+1; i++) {
+    for(int j=0; j<target+1; j++) {
+        if(i==0 ) {
+            dp[i][j] = false;
+        }
+        if(j==0){
+            dp[i][j] = true;
+        }
+    }
+}
+for(int i=1; i <N+1; i++) {
+    for(int j=1; j<target+1; j++) {
+        if(arr[i-1]<=j) { // can include
+            dp[i][j] = dp[i-1][j-wt[i-1]] || dp[i-1][j];   // true if either is true
+        } else { // can't include
+            dp[i][j] = dp[i-1][j];
+        }
+    }
+}
+```
+equal sum partition 
+- if sum == odd, return false
+- if even, find subset sum with target == sum/2
+
+count of subsets with a given sum
+- Similar to subset sum, make 1 instead of true
+- Do + instead of ||
+
+Minimum subset sum difference (abs(S1 - S2) => minimum)
+- Similar to equal sum partition, here we have to minimise S1-S2 instead of 0
+- Create the whole dp[][] 2D array and store the last row in some other array vec[]
+  - Store only half elements because we want to store smaller values only
+- Now, find the smallest value for sum(arr) - 2*vec[i]
+- this is your answer
+
+No of subsets with given difference
+```
+S1 - S2 = diff
+S1 + S2 = sum(arr)
+S1 = (diff + sum(arr))/2
+=> similar to subset sum
+```
+
+Target sum 
+- Ques asks, how many subsets can you create using + and - in between the elements to create this target number
+- It becomes S1 - S2 = target
+- Similar to above question
+
+#### `Unbounded knapsack`
+```java
+// Only difference in unbounded knapsack
+dp[i][j] = Math.max(val[i-1] + dp[i][j-wt[i-1]], dp[i-1][j]); // because ith element is still not considered processed
 ```
 rod cutting
 ```java
