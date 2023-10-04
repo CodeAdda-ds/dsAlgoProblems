@@ -1,6 +1,6 @@
+
+```java
 // Problem link: https://practice.geeksforgeeks.org/problems/first-negative-integer-in-every-window-of-size-k3345/1#
-
-
 class Compute {
     
     public long[] printFirstNegativeInteger(long A[], int N, int K)
@@ -39,9 +39,9 @@ class Compute {
         return a;
     }
 }
+```
 
 
-/*
 Points to remember: 
 1. creating a queue
 Deque<Long> q = new ArrayDeque<>(); 
@@ -52,4 +52,3 @@ we can deal with it when it's part of the next window
 Matlab, agar ek window me more than answers dikh rahe hain then use a queue and store the answers there and deal with
 them in the next windows
 
-*/
