@@ -1,20 +1,153 @@
+##### `Depth First Search`
 ```
-TODO: add all the algorithms here in this file
--------------------------- Depth First Search --------------------------------------
-
 // on graph
-void dfs(int currNode){
-    visited[currNode] = 1;
-    
-    for(int adjNode : adj[currNode]){
-        if(visited[adjNode]==0){
-            dfs(adjNode);
-        }
-    }
-}
 
 // on 2D grid
 // cell  = node
 // sides = edges
 // sides + corners = edges
+
+general code which will be written in the function which is given in question
+
+for ( i --> 0 to n )
+    if (visited[i]==0)
+        bfs(i) or dfs(i)
+```
+DFS on grid
+```java
+public void dfs(char[][] grid, int i, int j) {
+    // if i/j surpassed the boundaries of grid or node is already visited
+    if (i < 0 || j < 0 || i >= grid.length || j >= grid[0].length || grid[i][j] == '0') {
+        return;
+    }
+    
+    grid[i][j] = '0';
+    dfs(grid, i - 1, j); // down
+    dfs(grid, i + 1, j); // up
+    dfs(grid, i, j - 1); // left
+    dfs(grid, i, j + 1); // right
+}
+```
+BFS on grid
+```java
+public void bfs(char[][] grid, int i, int j) {
+    int[][] dirs = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
+    Queue<int[]> queue = new LinkedList<>();
+    queue.add(new int[]{i, j});
+    int row = grid.length;
+    int col = grid[0].length;
+    grid[i][j] = '0'; // mark node as visited
+
+    while (!queue.isEmpty()) {
+        int[] current = queue.poll();
+        int x = current[0];
+        int y = current[1];
+
+        for (int[] dir : dirs) {
+            int x1 = x + dir[0];
+            int y1 = y + dir[1];
+
+            if (x1 >= 0 && y1 >= 0 && x1 < row && y1 < col && grid[x1][y1] == '1') {
+                queue.add(new int[]{x1, y1});
+                grid[x1][y1] = '0';
+            }
+        }
+    }
+}
+```
+Kadane's Algorithm
+```java
+// added the starting and ending index of max subarray as well
+static void maxSubArraySum(int a[])
+    {
+        int max_so_far = Integer.MIN_VALUE,
+            max_ending_here = 0, size=arr.length, start = 0, end = 0, s = 0;
+ 
+        for (int i = 0; i < size; i++) {
+            max_ending_here += a[i];
+ 
+            if (max_so_far < max_ending_here) {
+                max_so_far = max_ending_here;
+                start = s;
+                end = i;
+            }
+ 
+            if (max_ending_here < 0) {
+                max_ending_here = 0;
+                s = i + 1;
+            }
+        }
+        System.out.println("Maximum contiguous sum is "
+                           + max_so_far);
+        System.out.println("Starting index " + start);
+        System.out.println("Ending index " + end);
+    }
+```
+### `Sorting Algorithms`
+#### Merge Sort
+Merge sort is better than Quick sort for larger data structure or datasets
+Quick sort is perferred for arrays where Merge sort is perferred for linkedlists like data structures
+Space Complexity: O(n)
+- Worst Case: O(nlogn)
+- Best Case: O(nlogn) {when already sorted so least no of comparisons required}
+- Average Case: O(nlogn)
+```java
+private static void mergeSort(int[] nums) {
+    if (nums.length < 2)
+        return;
+    int mid = nums.length / 2;
+
+    int[] left = Arrays.copyOfRange(nums, 0, mid); // creates a copy of array within this range 
+    mergeSort(left);
+    int[] right = Arrays.copyOfRange(nums, mid, nums.length);
+    mergeSort(right);
+
+    // Merge the two arrays
+    merge(nums, left, right);
+}
+
+private static void merge(int[] nums, int[] left, int[] right) {
+    int pL = 0, pR = 0, index = 0;
+    while (pL < left.length && pR < right.length) {
+        if (left[pL] < right[pR]) {
+            nums[index++] = left[pL++];
+        } else {
+            nums[index++] = right[pR++];
+        }
+    }
+    while (pL < left.length) {
+        nums[index++] = left[pL++];
+    }
+    while (pR < right.length) {
+        nums[index++] = right[pR++];
+    }
+}
+```
+#### Quick Sort
+Quick sort is faster for in-memory sorting but worst case is too much
+Space Complexity: O(n)
+- Worst Case: O(n2) {when random pivot selection will happen such that full iteration is required each time}
+- Best Case: O(nlogn)
+- Average Case: O(nlogn)
+```java
+static void quickSort(int arr[], int start, int end) {
+    if (start < end) {
+        int pIndex = partition(arr, start, end);
+        quickSort(arr, start, pIndex - 1);
+        quickSort(arr, pIndex + 1, end);
+    }
+}
+
+static int partition(int arr[], int start, int end) {
+    int pivot = arr[end]; // we can also set the pivot randomly to hopefully improve the performance
+    int pIndex = start;
+    for (int i = start; i < end; i++) {
+        if (arr[i] <= pivot) {
+            swap(arr, i, pIndex);
+            pIndex++;
+        }
+    }
+    swap(arr, pIndex, end);
+    return pIndex;
+}
 ```
