@@ -311,6 +311,30 @@ for (Integer value : map.values()) {
 map.forEach((k,v) -> System.out.println("Key type = "
                 + k.getClass().getSimpleName() + ", Value type = " + v.getClass().getSimpleName() + ".")); // String aur Integer dega output me
 ```
+Returning a sorted HashMap based on values
+```java
+// function to return a hashmap with sorted values
+public static HashMap<String, Integer> createSortedHashMap(HashMap<String, Integer> inputMap) {
+    // create an ArrayList of Map.Entry type so we can apply sort method on it 
+    ArrayList<Map.Entry<String, Integer>> newList = new ArrayList<>(inputMap.entrySet());
+
+    // Sort the list based on values
+    Collections.sort(newList, new Comparator<Map.Entry<String, Integer>>() {
+        @Override // method overloading
+        public int compare(Map.Entry<String, Integer> o1, Map.Entry<String, Integer> o2) {
+	    // Sorting in ascending order, for descending order, swap o1 and o2
+	    return o1.getValue().compareTo(o2.getValue());
+        }
+    });
+
+    // Create a LinkedHashMap to store sorted entries
+    LinkedHashMap<String, Integer> sortedHashMap = new LinkedHashMap<>();
+    for (Map.Entry<String, Integer> entry : newList) {
+        sortedHashMap.put(entry.getKey(), entry.getValue());
+    }
+    return sortedHashMap;
+}
+```
 ##### Set
 ```java
 HashSet<Integer> s = new HashSet<>();
