@@ -36,8 +36,8 @@ class Solution
 
                 // yahan se bfs ka asli logic shuru hota hai
                 // iske pehle apan ne wahi likha jo main me likhne ki baat ki thi
-                Queue<Integer> q = new LinkedList<>();
-                q.add(i);
+                Queue<Integer> q = new LinkedList<>(); // queue can be of self created data type as well if we need to store more info
+                q.add(i); // if in some question, there are more than one starting points we'll need to add all of those in queue
                 visited[i] = true;
 
                 while (!q.isEmpty())
