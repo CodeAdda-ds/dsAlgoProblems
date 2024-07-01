@@ -66,6 +66,7 @@ str.toUpperCase();
 str.trim(); // removes the spaces before and after the string not in betweeen and returns a new string
 char[] arr = str.toCharArray() // returns an array of characters
 str.contains("air");  // returns true
+if(str.equals("airplane")) // returns true
 ```
 Convert any data type into string
 ```java
@@ -78,6 +79,7 @@ Converting string value to number for operations
 int sum=0;
 int sum2=0;
 String n = "1234";
+int num = Integer.parseInt(n); // 1234
 for(int i=0;i<n.length();i++){
     sum += Character.getNumericValue(n.charAt(i)); // method 1
     sum2 += n.charAt(i) - '0'; // method 2
@@ -242,7 +244,7 @@ boolean status = stack.empty(); // tells if the stack is empty or not
 ```java
 Queue<Integer> queue = new LinkedList<Integer>();
 for(int i=0; i<5; i++){
-queue.add(i);
+	queue.add(i);
 } // adds [0, 1, 2, 3, 4]
 Integer head = queue.remove();  // returns 0
 ```
