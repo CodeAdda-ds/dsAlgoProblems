@@ -65,6 +65,7 @@ str.toLowerCase();
 str.toUpperCase();
 str.trim(); // removes the spaces before and after the string not in betweeen and returns a new string
 char[] arr = str.toCharArray() // returns an array of characters
+String newString = new String(arr); // creates a string from a character array
 str.contains("air");  // returns true
 if(str.equals("airplane")) // returns true
 ```
