@@ -68,6 +68,11 @@ char[] arr = str.toCharArray() // returns an array of characters
 String newString = new String(arr); // creates a string from a character array
 str.contains("air");  // returns true
 if(str.equals("airplane")) // returns true
+
+String a = "a1?"
+Character.isLetterOrDigit(str.charAt(0))  // true
+Character.isLetterOrDigit(str.charAt(1))  // true
+Character.isLetterOrDigit(str.charAt(2))  // true
 ```
 Convert any data type into string
 ```java
