@@ -1,0 +1,28 @@
+#### Identification
+If you write a Brute force solution like this:
+```
+for i 0 -> n
+  for j 0 -> i or i -> 0 or i -> n or n -> i
+```
+Basically, if your j depends on i, stack could be used
+
+#### Monotonic Stack
+- elements are either monotonically increasing/decreasing
+- used to solve problems where you need to find solutions from immediate neighbours e.g. next smaller/greater element, max area of histogram, stock span problem etc
+
+#### Nearest Smaller Element
+```java
+Stack<Integer> st = new Stack<>();
+int[] prevSmaller = new int[A.length];
+for(int i=0; i<A.length; i++) {
+    while(!st.isEmpty() && st.peek()>=A[i]) {
+        st.pop(); // removing visited elements which are greater  
+    } 
+    if(!st.isEmpty() && st.peek() < A[i]){ // found the nearest smaller element
+        prevSmaller[i] = st.peek();
+    } else {
+        prevSmaller[i] = -1; // found no element smaller 
+    }
+    st.push(A[i]);      
+}
+```
