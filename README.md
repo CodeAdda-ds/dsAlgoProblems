@@ -257,15 +257,46 @@ Integer head = queue.remove();  // returns 0
 ##### Deque
 The Deque supports the addition as well as the removal of elements from both ends of the data structure. Therefore, a deque can be used as a stack or a queue.
 ```java	
- //Creating Deque and adding elements  
-   Deque<String> deque = new ArrayDeque<String>();  
-   deque.add("Ravi");    
-   deque.add("Vijay");     
-   deque.add("Ajay");    
-   //Traversing elements  
-   for (String str : deque) {  
-   System.out.println(str);  
-   }   
+// Adding elements to the end
+deque.add("Ravi");       // O(1) average
+deque.addLast("Vijay");  // O(1) average
+
+// Adding elements to the front
+deque.addFirst("Ajay");  // O(1) average
+
+// Offering elements (non-exception version)
+deque.offerFirst("Ankit");  // returns false if full, O(1)
+deque.offerLast("Raj");     // O(1)
+
+// Retrieving elements without removing
+System.out.println(deque.getFirst()); // Returns first element, O(1)
+System.out.println(deque.getLast());  // Returns last element, O(1)
+System.out.println(deque.peekFirst()); // Returns first or null, O(1)
+System.out.println(deque.peekLast());  // Returns last or null, O(1)
+
+// Removing elements from both ends
+deque.removeFirst(); // Removes first, throws exception if empty, O(1)
+deque.removeLast();  // Removes last, O(1)
+
+// Polling elements (non-exception version)
+deque.pollFirst(); // Removes first or returns null, O(1)
+deque.pollLast();  // Removes last or returns null, O(1)
+
+// Stack-style usage
+deque.push("Neha"); // Same as addFirst(), O(1)
+deque.pop();        // Same as removeFirst(), O(1)
+
+// Checking size and emptiness
+System.out.println(deque.size());    // O(1)
+System.out.println(deque.isEmpty()); // O(1)
+
+// Clearing all elements
+deque.clear(); // Removes all elements, O(n)
+
+// Traversing elements
+for (String str : deque) {  // O(n)
+	System.out.println(str);
+}
 ```
 ##### Heap
 Heap works like a Stack, the latest value inserted will be removed first
