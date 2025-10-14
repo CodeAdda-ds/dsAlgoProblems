@@ -301,17 +301,17 @@ for (String str : deque) {  // O(n)
 ##### Heap
 Heap works like a Stack, the latest value inserted will be removed first
 
-Time complexity: Nlog(K)
+Time complexity of inserting n elements in a heap of size K: Nlog(K)
 
 ```java
 PriorityQueue<Integer> minHeap = new PriorityQueue<Integer> (); // used to find kth largest
 PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> b - a); // used to find kth smallest
 
-minHeap.offer(val); // push val into minHeap
+minHeap.offer(val); // push val into minHeap 
 
 // if size exceeds k, remove the latest element
 if (minHeap.size() > k)
-    minHeap.poll();
+    minHeap.poll(); // 0(logk) per poll
 
 minheap.peek(); // returns the top of the minHeap
 
@@ -319,6 +319,13 @@ minheap.peek(); // returns the top of the minHeap
 while(!minHeap.isEmpty()) {
   // some work
 }
+minHeap.offer(val);      // O(log n) - insert element
+minHeap.add(val);        // O(log n) - same as offer(), throws exception if fails
+minHeap.poll();          // O(log n) - remove and return root
+minHeap.peek();          // O(1)     - get root without removing
+minHeap.remove(val);     // O(n)     - remove specific element
+minHeap.isEmpty();       // O(1)     - check if empty
+minHeap.size();          // O(1)     - get number of elements
 ```
 #### `Map`
 ##### HashMap
